@@ -71,3 +71,34 @@ button {
     display: block;
     font-size: 14px;
 }
+
+.updateForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.updateForm>label,
+.updateForm>input,
+.updateForm>textarea
+ {
+    display: block;
+    margin: 5px 10px;
+}
+
+
+.updateBtn {
+    width: 100px;
+    height: 20px;
+    background-color:rgb(226, 142, 15);
+    border: none;
+    color: white;
+}
+
+
+.cancelBtn {
+    width: 100px;
+    height: 20px;
+    background-color: rgb(186, 15, 192);
+    border: none;
+    color: white;
+}
