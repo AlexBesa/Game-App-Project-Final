@@ -20,10 +20,12 @@ function deleteGame(gameID, callbackFunction) {
     }).then(function(r){
         return r.text();
     }).then(function(apiresponse){
+        console.log("api resp",apiresponse)
         callbackFunction(apiresponse);
     });
 
 }
+
 
 function createGameRequest(gameObject, callbackCreateGame){
     fetch(apiURL + "/games", {
@@ -40,21 +42,27 @@ function createGameRequest(gameObject, callbackCreateGame){
     });
 }
 
+function updateGameRequest(updatedGameObj, callbackUpdateGame, gameContainerDiv){
+	console.log("Here is updated updatedGameObj: ", updatedGameObj);	
+		fetch(apiURL + "/games/" + updatedGameObj._id, {
+			method: "PUT",
+			headers: {
+				"Content-Type": "application/x-www-form-urlencoded"
+			},
+			body:"title=" + updatedGameObj.title 
+				+"&description=" + updatedGameObj.description 
+				+"&imageUrl=" + updatedGameObj.imageUrl
+			}).then(function(response){
+					return response.json();
+			}).then(function(updatedGame){
+					// console.log(updatedGame);
+                    gameContainerDiv.classList.remove('grayed-out');
+                    // grayed-out is indicating that the function is unavailable at a given time
+                    // it's used until user receive the response from 'server'
+					callbackUpdateGame(updatedGame);
+			});
+	}
 
-function updateGameRequest(updatedGameObj, callbackUpdateGame){
-    fetch(apiURL + "/games", {
-        method: "PUT",
-        headers: {
-            "Content-Type": "application/x-www-form-urlencoded"
-        },
-        body: updatedGameObj
-    }).then(function(response){
-        return response.json();
-    }).then(function(updatedGame){
-        console.log(updatedGame);
-        callbackUpdateGame(updatedGame);
-    });
-}
 
 
 // "application/json"

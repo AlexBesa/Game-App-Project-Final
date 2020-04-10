@@ -102,3 +102,10 @@ button {
     border: none;
     color: white;
 }
+.container>div {
+    clear: both;
+}
+
+.grayed-out{
+	opacity: 0.5;
+}
