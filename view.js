@@ -34,13 +34,13 @@ function createUpdateDivElement(updateGameObj, gameContainer){
     updateElement.classList.add("updateFormDiv");
     updateElement.innerHTML = 
         `<div class ="updateForm", id ="${updateGameObj._id}">
-        <label for="gameTitle">Your Title *</label>
+        <label for="gameTitle">Here you can update the Title</label>
         <input type="text" value="${updateGameObj.title}" name="gameTitle" id="updateGameTitle" />
         
-        <label for="updateGameDescription">Your Description</label>
+        <label for="updateGameDescription">Here you can modify the description</label>
         <input type="text" name="updateGameDescription" value = "${updateGameObj.description}" id="updateGameDescription" />
 
-        <label for="gameImageUrl">Put a new URL image*</label>
+        <label for="gameImageUrl">Put a new URL image</label>
         <input type="text" value = "${updateGameObj.imageUrl}" name="updateGameImageUrl" id="updateGameImageUrl" />
 
         <button class="updateBtn">Save Changes</button>

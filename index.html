@@ -7,12 +7,13 @@
     <title>Games App</title>
 </head>
 <body>
+    <h1 class="footer">Application Game Project</h1>
     <form class="creationForm">
         <label for="gameTitle">Title *</label>
-        <input type="text" value="" name="gameTitle" id="gameTitle" />
+        <input type="text" value="" name="gameTitle" id="gameTitle" placeholder="Enter the Title"/>
 
         <label for="gameDescription">Description</label>
-        <textarea name="gameDescription" id="gameDescription"></textarea>
+        <textarea name="gameDescription" id="gameDescription" placeholder="Enter the Description"></textarea>
 
         <label for="gameGenre">Genre *</label>
         <select name="gameGenre" id="gameGenre">
@@ -22,13 +23,13 @@
         </select>
 
         <label for="gamePublisher">Publisher</label>
-        <input type="text" name="gamePublisher" id="gamePublisher" />
+        <input type="text" name="gamePublisher" id="gamePublisher" placeholder="Enter the Publisher name"/>
 
         <label for="gameImageUrl">Image URL *</label>
-        <input type="text" name="gameImageUrl" id="gameImageUrl" />
+        <input type="text" name="gameImageUrl" id="gameImageUrl" placeholder="Enter a new URL image"/>
 
         <label for="gameRelease">Release Date *</label>
-        <input type="text" name="gameRelease" id="gameRelease" />
+        <input type="text" name="gameRelease" id="gameRelease" placeholder="Enter date(only number format)"/>
 
         <button class="submitBtn">Create Game</button>
     </form>
@@ -47,40 +48,3 @@
 
 <!-- https://cdn-products.eneba.com/resized-products/4Niqxs9XlkCg2qaip3EZZo2ntYIfZjEfoQRc2itdFi0_390x400_1x-0.jpeg -->
 
-
-<!-- //     `<div id="${gameObj._id}">
-    //     <h1>${gameObj.title}</h1> 
-    //     <img src="${gameObj.imageUrl}" />
-    //     <p>${gameObj.description}</p> 
-    //     <button class="delete-btn">Delete Game</button>
-    //     <button class="update-btn">Edit Game</button>
-    // </div>`;
-    
-    
-    // `<div id="${updateGameObj._id}">
-    //             <label for="gameTitle">Your Title *</label>
-    //             <input type="text" value="${updateGameObj.title}" name="gameTitle" id="updateGameTitle" />
-    //             <label for="updateGameDescription">Your Description</label>
-    //             <input type="text" name="updateGameDescription" value = "${updateGameObj.description}" id="updateGameDescription" />
-    
-    //             <label for="gameImageUrl">Put a new URL image*</label>
-    //             <input type="text" value = "${updateGameObj.imageUrl}" name="updateGameImageUrl" id="gameImageUrl" />
-    
-    //             <button class="updateBtn">Save Changes</button>
-    //             <button class="cancelBtn">Cancel</button>
-    //         </div>` -->
-
-
-    <!-- <form id="updateForm" class="updateForm">
-        <label for="gameTitle">Your Title *</label>
-        <input type="text" value="" name="gameTitle" id="gameTitle" />
-
-        <label for="gameDescription">Your Description</label>
-        <textarea name="gameDescription" id="gameDescription"></textarea>
-  
-        <label for="gameImageUrl">Put a new URL image*</label>
-        <input type="text" name="gameImageUrl" id="gameImageUrl" />
-
-        <button class="updateBtn">Save Changes</button>
-        <button class="cancelBtn">Cancel</button>
-    </form> -->
